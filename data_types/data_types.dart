@@ -13,4 +13,8 @@ void main() {
   }
 
   print(typeBoolean);
+
+  print("------------");
+
+  (typeBoolean ? print("True") : print("False"));
 }
