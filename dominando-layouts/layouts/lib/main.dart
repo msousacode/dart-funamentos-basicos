@@ -9,11 +9,27 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    //O primeiro widget é o MaterialApp depois tudo vai derivar dele
+    return MaterialApp(
+        //é uma casca de aplicação melhor do que o Container()
+        title: 'titulo da aba',
+        theme: ThemeData(primarySwatch: Colors.deepOrange),
+        debugShowCheckedModeBanner: false,
+        home: HomePage());
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //É uma boa prácita usar o Scaffold pois ele vem com regras de layouts melhores que o Container. Vem com uma estrutura de aplicativo.
+      appBar: AppBar(
+        title: Text("meu app"),
+      ),
+      body: Container(
+        color: Colors.blue,
+        child: Center(child: Text("XXXXXX")),
       ),
     );
   }
